@@ -3,9 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+
     <title>Home Design by Mariel</title>
   </head>
-  <body>
-    <h1>Hello World!</h1>
+  <body class="body">
+    <nav class="nav">
+      <div class="nav__logo-container">
+        <img class="nav__logo-img" src="" alt="Home Design Logo" />
+      </div>
+
+      <ul class="nav__list">
+        <li class="nav__list-item"><a class="link" href="#">Spaces</a></li>
+        <li class="nav__list-item"><a class="link" href="#">Services</a></li>
+        <li class="nav__list-item"><a class="link" href="#">Latest</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <header class="header">
+        <img
+          class="hero-quote"
+          src="assets/hero-quote.svg"
+          alt="Quote in beautiful styling that says 'beautiful and quality design for everyone'"
+        />
+      </header>
+
+      <section class="spaces">
+        <ul class="spaces__carousel">
+          <li class="spaces__carousel-item spaces__carousel-item--img-1"></li>
+          <li
+            class="spaces__carousel-item spaces__carousel-item--center spaces__carousel-item--img-2"
+          ></li>
+          <li class="spaces__carousel-item spaces__carousel-item--img-3"></li>
+        </ul>
+        <div class="spaces__interactive-heading">
+          <h2 class="h2">
+            Let's create
+            <span>
+              <ul class="spaces__words-list">
+                <li>healthy</li>
+                <li>beautiful</li>
+                <li>comfortable</li>
+                <li>timeless</li>
+              </ul>
+            </span>
+            spaces together
+          </h2>
+        </div>
+      </section>
+
+      <section class="services">
+        <div class="services__heading-container">
+          <div class="services__heading-line"></div>
+          <h2 class="services__heading h2 h2--white">
+            What are you looking for?
+          </h2>
+          <div class="services__heading-line"></div>
+        </div>
+
+        <ul class="services__list">
+          <a class="services__link" href="#">
+            <li class="services__list-item">Interior Design Service</li>
+          </a>
+          <a class="services__link" href="#">
+            <li class="services__list-item">A Personal Furniture Shopper</li>
+          </a>
+          <a class="services__link" href="#">
+            <li class="services__list-item">DIY</li>
+          </a>
+          <a class="services__link" href="#">
+            <li class="services__list-item">Just Find Beautiful Pieces</li>
+          </a>
+        </ul>
+      </section>
+
+      <section class="socials"></section>
+    </main>
+
+    <footer class="footer"></footer>
   </body>
 </html>

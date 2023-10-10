@@ -1,0 +1,83 @@
+* 
+    box-sizing: border-box
+    margin: 0
+    padding: 0 
+
+
+// "Saol Display"
+@font-face 
+    font-family: 'Saol Display'
+    src: url('../fonts/SaolDisplay-Regular.woff2') format('woff2'), url('../fonts/SaolDisplay-Regular.woff') format('woff')
+    font-weight: normal
+    font-style: normal
+
+
+// "Akzidenz-Grotesk Pro"
+@font-face 
+    font-family: 'Akzidenz-Grotesk Pro'
+    src: url('../fonts/AkzidenzGroteskPro-Regular.woff2') format('woff2'), url('../fonts/AkzidenzGroteskPro-Regular.woff') format('woff')
+    font-weight: 400
+    font-style: normal
+  
+
+
+.h1
+    font-family: 'Saol Display'
+    font-size: 5.625rem
+
+
+.h2 
+    font-family: 'Saol Display'
+    font-size: 3.75rem
+    font-weight: 200
+
+    &--white
+        color: #fff
+
+.h3
+    font-size: 2rem
+
+
+.h4 
+    color: #B7B7B7
+    font-family: 'Akzidenz-Grotesk Pro'
+    font-size: 0.625rem
+
+.h4--primary-color
+    color: #050505
+
+.link  
+    color: #050505
+    font-family: 'Akzidenz-Grotesk Pro'
+    font-size: 0.875rem
+    text-decoration: none
+
+
+.container
+    width: 80%
+    margin: 0 auto
+
+.body
+    position: relative
+    width: 100%
+    height: 100%
+    background-color: #f6f4f2
+
+
+.nav
+    position: absolute
+    top: 0
+    width: 100%
+    padding: .625rem
+    display: flex
+    justify-content: space-between
+
+.nav__list
+    list-style: none
+    display: flex
+
+.nav__list-item
+    margin-right: 3rem
+
+
+.footer

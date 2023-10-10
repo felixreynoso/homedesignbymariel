@@ -1,0 +1,126 @@
+.header
+    // background-color: red
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    // min-height: 35rem
+
+.hero-quote
+    width: 50%
+    height: auto
+    
+.spaces
+    width: 100%
+
+    &__carousel
+        height: 30rem
+        max-height: 30rem
+        width: 100%
+        display: flex
+        list-style: none
+        justify-content: space-between
+        padding: 0 1%
+        
+        &-item
+            height: 100%
+            width: 29%
+            background-color: yellow
+
+        
+            &--center
+                width: 40%
+
+            &--img-1
+                background: url("../assets/space-1.png")
+                // background-size: contain
+                // background-repeat: no-repeat
+                background-size: 100% 100%
+
+            &--img-2
+                background: url("../assets/space-2.png")
+                // background-size: contain
+                // background-repeat: no-repeat
+                background-size: 100% 100%
+
+            &--img-3
+                background: url("../assets/space-3.png")
+                // background-size: contain
+                // background-repeat: no-repeat
+                background-size: 100% 100%
+                background-position:  50% 100%
+
+
+        
+            
+    &__interactive-heading
+        height: 25rem
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 2rem
+    
+    &__interactive-heading > .h2
+        display: flex
+        align-items: center
+
+    &__words-list
+        font-style: italic
+        list-style: none
+        display: flex
+        flex-direction: column
+        align-items: center
+        color: rgb(200, 182,163)
+
+
+    
+.services
+    background: url("../assets/bckgd-03.jpg")
+    background-size: cover
+    background-repeat: no-repeat
+    // height: 30rem
+    width: 100%
+
+    &__heading
+        width: 40rem
+        margin: 0 1rem
+        white-space: nowrap
+        
+        &-container
+            display: flex
+            height: 10rem
+            justify-content: space-between
+            align-items: center
+
+        &-line
+            height: 1px
+            width: 100%
+            background-color: white
+
+    &__list
+        display: flex
+        padding: 1rem 10rem 3rem 10rem
+        list-style: none
+        justify-content: space-between
+
+    &__list-item
+        height: 15rem
+        width: 15rem
+        border-radius: 100%
+        border: 1px solid rgba(255,255,255, .5)
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 1rem
+
+    &__link
+        font-family: "Saol Display"
+        weight: 600
+        color: white
+        text-align: center
+        text-decoration: none
+        font-size: 1.75rem
+        line-height: 2.1rem
+
+// .socials
+    
