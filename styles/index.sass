@@ -143,11 +143,16 @@
         width: 50%
         height: 100%
         display: flex
+        
 
     &__group-big
-        position: relative
+        background: url("../assets/post-1.png")
         width: 65%
         height: 100%
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+
 
     &__group-col
         width: 35%
@@ -156,19 +161,28 @@
         flex-direction: column
 
     &__group-small
-        position: relative
+        background: url("../assets/post-1.png")
         width: 100%
         height: 50%
-    
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        
+    &__link
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 100%
+        width: 100%
 
-    &__link:hover 
-        & .socials__post-image
-            opacity: .5
+        &:hover 
+            background-color: rgba(200, 182, 163,.25)
             transition: .5s ease
+                
 
-        & .socials__post-logo
-            display: flex
-            transition: .5s ease
+            & .socials__post-logo
+                display: flex
+                transition: .5s ease
 
 
 
@@ -180,7 +194,6 @@
     
     
     &__post-logo
-        position: absolute
         display: none
         height: 100%
         width: 100%

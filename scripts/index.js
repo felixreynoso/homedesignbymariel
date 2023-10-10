@@ -42,8 +42,9 @@ async function getMediaUrl(postsArray, displayPost) {
 }
 
 function displayPost(postObj, id) {
-  let img = document.getElementById(`socials_post-${id}`);
-  img.src = postObj.media_url;
+  console.log(id);
+  let div = document.getElementById(`socials_post-${id}`);
+  div.style.backgroundImage = `url('${postObj.media_url}')`;
 }
 
-// getPosts();
+getPosts();
