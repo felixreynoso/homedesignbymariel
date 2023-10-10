@@ -69,14 +69,22 @@
   width: 100%;
   padding: 0.625rem;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
-
+.nav__logo-container {
+  height: 100%;
+  width: 10rem;
+}
+.nav__logo-container-img {
+  height: 2rem;
+  width: auto;
+  color: black;
+}
 .nav__list {
   list-style: none;
   display: flex;
 }
-
 .nav__list-item {
   margin-right: 3rem;
 }/*# sourceMappingURL=global.css.map */
