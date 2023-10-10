@@ -1,4 +1,4 @@
-let access_token =
+let secret =
   "IGQWROVVc4NVlrMVlmQWFTTjc0cGdQN3d4MU1yaVByMmhQWmtQeVhKc0xYYlFwM3BfUDJxYTVUQ1R6TE5JRld1Y2NmR3BJcUh5aHllVDdVcjRQd0pIYk84TndhSEY1TTZAlNDlhaGNYTUpUZAwZDZD";
 
 async function getPosts() {
@@ -6,7 +6,7 @@ async function getPosts() {
     let options = {
       params: {
         fields: "id,caption,media_type,permalink",
-        access_token: access_token,
+        access_token: secret,
       },
     };
     const response = await axios.get(
@@ -27,7 +27,7 @@ async function getMediaUrl(postsArray, displayPost) {
     let options = {
       params: {
         fields: "media_url",
-        access_token: access_token,
+        access_token: secret,
       },
     };
 
