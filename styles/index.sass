@@ -31,20 +31,14 @@
 
             &--img-1
                 background: url("../assets/space-1.png")
-                // background-size: contain
-                // background-repeat: no-repeat
                 background-size: 100% 100%
 
             &--img-2
                 background: url("../assets/space-2.png")
-                // background-size: contain
-                // background-repeat: no-repeat
                 background-size: 100% 100%
 
             &--img-3
                 background: url("../assets/space-3.png")
-                // background-size: contain
-                // background-repeat: no-repeat
                 background-size: 100% 100%
                 background-position:  50% 100%
 
@@ -77,7 +71,6 @@
     background: url("../assets/bckgd-03.jpg")
     background-size: cover
     background-repeat: no-repeat
-    // height: 30rem
     width: 100%
 
     &__heading
@@ -112,6 +105,13 @@
         justify-content: center
         padding: 1rem
 
+        &:hover
+            background-color: rgba(255,255,255)
+            color: black
+            transition: background-color 1s ease
+            transition: color 1s ease
+
+            
     &__link
         font-family: "Saol Display"
         weight: 600
@@ -121,5 +121,48 @@
         font-size: 1.75rem
         line-height: 2.1rem
 
-// .socials
+.socials
+    background-color: rgb(200, 182,163)
+
+    &__heading
+        color: white
+        height: 7.5rem
+        display: flex
+        align-items: center
+        justify-content: center
+        font-family: "Saol Display"
+        font-size: 3.75rem
+        font-weight: 200
+
+    &__container
+        display: flex
+        width: 100%
+        height: 30rem
+        
+    &__group
+        width: 50%
+        height: 100%
+        display: flex
+
+    &__group-big
+        width: 65%
+        height: 100%
+
+    &__group-col
+        width: 35%
+        height: 100%
+        display: flex
+        flex-direction: column
+
+    &__group-small
+        width: 100%
+        height: 50%
     
+    &__post-image
+        height: 100%
+        width: 100%
+        opacity: 1
+    
+        &:hover
+            opacity: .5
+            transition: .5s ease
