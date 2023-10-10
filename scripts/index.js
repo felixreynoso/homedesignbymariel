@@ -1,11 +1,11 @@
 let access_token =
-  "IGQWRQWHNYYWs4T3lrSS1yWmxKdVJ4elRab1VXcTB1dXlTUmw1c1ZA4eUx5WUhJUG81OHg0YUhRakVBQnlUcHkxMXRza3N6SThmUlBfN2pHdDA0Unh6RzZAwTkNKekZAWODBqUHJuQks0ZAzVVZAwZDZD";
+  "IGQWROVVc4NVlrMVlmQWFTTjc0cGdQN3d4MU1yaVByMmhQWmtQeVhKc0xYYlFwM3BfUDJxYTVUQ1R6TE5JRld1Y2NmR3BJcUh5aHllVDdVcjRQd0pIYk84TndhSEY1TTZAlNDlhaGNYTUpUZAwZDZD";
 
 async function getPosts() {
   try {
     let options = {
       params: {
-        fields: "id,caption",
+        fields: "id,caption,media_type,permalink",
         access_token: access_token,
       },
     };
@@ -14,7 +14,9 @@ async function getPosts() {
       options
     );
 
-    await getMediaUrl(response.data.data.slice(0, 6), displayPost);
+    data = response.data.data.filter((d) => d.media_type === "IMAGE");
+
+    await getMediaUrl(data.slice(0, 6), displayPost);
   } catch (error) {
     console.error(error);
   }
@@ -42,9 +44,11 @@ async function getMediaUrl(postsArray, displayPost) {
 }
 
 function displayPost(postObj, id) {
-  console.log(id);
   let div = document.getElementById(`socials_post-${id}`);
-  div.style.backgroundImage = `url('${postObj.media_url}')`;
+  let a = document.getElementById(`socials_anchor-${id}`);
+
+  div.style.backgroundImage = `url(${postObj.media_url})`;
+  a.href = postObj.permalink;
 }
 
 getPosts();
