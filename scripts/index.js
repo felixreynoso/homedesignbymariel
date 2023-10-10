@@ -1,5 +1,6 @@
-let secret =
-  "IGQWROVVc4NVlrMVlmQWFTTjc0cGdQN3d4MU1yaVByMmhQWmtQeVhKc0xYYlFwM3BfUDJxYTVUQ1R6TE5JRld1Y2NmR3BJcUh5aHllVDdVcjRQd0pIYk84TndhSEY1TTZAlNDlhaGNYTUpUZAwZDZD";
+// let secret =
+//   "IGQWROVVc4NVlrMVlmQWFTTjc0cGdQN3d4MU1yaVByMmhQWmtQeVhKc0xYYlFwM3BfUDJxYTVUQ1R6TE5JRld1Y2NmR3BJcUh5aHllVDdVcjRQd0pIYk84TndhSEY1TTZAlNDlhaGNYTUpUZAwZDZD"
+let secret = "hello";
 
 async function getPosts() {
   try {
