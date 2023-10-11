@@ -1,29 +1,34 @@
-// let secret =
-//   "IGQWROVVc4NVlrMVlmQWFTTjc0cGdQN3d4MU1yaVByMmhQWmtQeVhKc0xYYlFwM3BfUDJxYTVUQ1R6TE5JRld1Y2NmR3BJcUh5aHllVDdVcjRQd0pIYk84TndhSEY1TTZAlNDlhaGNYTUpUZAwZDZD"
-let secret = "hello";
+// var secret
 
 async function getPosts() {
   try {
+    const t = await axios.get(
+      "https://qbp1gex47l.execute-api.us-east-2.amazonaws.com/helloWorld"
+    );
+
+    const secret = "IG".concat(t.data);
+
     let options = {
       params: {
         fields: "id,caption,media_type,permalink",
         access_token: secret,
       },
     };
-    const response = await axios.get(
-      "https://graph.instagram.com/me/media",
-      options
-    );
+    console.log(options);
+    // const response = await axios.get(
+    //   "https://graph.instagram.com/me/media",
+    //   options
+    // );
 
-    data = response.data.data.filter((d) => d.media_type === "IMAGE");
+    // data = response.data.data.filter((d) => d.media_type === "IMAGE");
 
-    await getMediaUrl(data.slice(0, 6), displayPost);
+    // await getMediaUrl(data.slice(0, 6), displayPost, secret);
   } catch (error) {
     console.error(error);
   }
 }
 
-async function getMediaUrl(postsArray, displayPost) {
+async function getMediaUrl(postsArray, displayPost, secret) {
   try {
     let options = {
       params: {
