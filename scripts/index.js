@@ -6,7 +6,6 @@ async function getPosts() {
       "https://qbp1gex47l.execute-api.us-east-2.amazonaws.com/helloWorld"
     );
 
-    console.log(t, "x");
     const secret = "IG".concat(t.data.data);
 
     let options = {
@@ -15,15 +14,15 @@ async function getPosts() {
         access_token: secret,
       },
     };
-    console.log(options);
-    // const response = await axios.get(
-    //   "https://graph.instagram.com/me/media",
-    //   options
-    // );
 
-    // data = response.data.data.filter((d) => d.media_type === "IMAGE");
+    const response = await axios.get(
+      "https://graph.instagram.com/me/media",
+      options
+    );
 
-    // await getMediaUrl(data.slice(0, 6), displayPost, secret);
+    data = response.data.data.filter((d) => d.media_type === "IMAGE");
+
+    await getMediaUrl(data.slice(0, 6), displayPost, secret);
   } catch (error) {
     console.error(error);
   }
