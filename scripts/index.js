@@ -6,7 +6,8 @@ async function getPosts() {
       "https://qbp1gex47l.execute-api.us-east-2.amazonaws.com/helloWorld"
     );
 
-    const secret = "IG".concat(t.data);
+    console.log(t, "x");
+    const secret = "IG".concat(t.data.data);
 
     let options = {
       params: {
