@@ -1,5 +1,3 @@
-// var secret
-
 async function getPosts() {
   try {
     const t = await axios.get(
