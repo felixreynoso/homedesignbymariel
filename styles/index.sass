@@ -182,8 +182,11 @@ $desktop-resolution: 1280px
         align-items: center
         justify-content: center
         font-family: "Saol Display"
-        font-size: 3.75rem
+        font-size: 2rem
         font-weight: 200
+
+        @include tablet 
+            font-size: 3.75rem
 
     &__container
         display: flex

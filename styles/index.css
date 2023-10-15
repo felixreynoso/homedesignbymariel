@@ -183,8 +183,13 @@
   align-items: center;
   justify-content: center;
   font-family: "Saol Display";
-  font-size: 3.75rem;
+  font-size: 2rem;
   font-weight: 200;
+}
+@media (min-width: 768px) {
+  .socials__heading {
+    font-size: 3.75rem;
+  }
 }
 .socials__container {
   display: flex;
