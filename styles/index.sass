@@ -1,3 +1,17 @@
+$tablet-resolution: 768px
+$desktop-resolution: 1280px
+
+@mixin tablet 
+  @media (min-width: $tablet-resolution) 
+    @content
+  
+
+
+@mixin desktop 
+  @media (min-width: $desktop-resolution) 
+    @content
+
+    
 .header
     height: 100vh
     display: flex
@@ -5,64 +19,89 @@
     align-items: center
 
 .hero-quote
-    width: 50%
+    width: 85%
     height: auto
+
+    @include tablet
+        width: 50%
     
 .spaces
     width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
 
     &__carousel
-        height: 27rem
-        max-height: 30rem
         width: 100%
         display: flex
         list-style: none
         justify-content: space-between
         padding: 0 1%
+        flex-wrap: wrap
         
-        &-item
-            height: 100%
-            width: 29%
-            background-color: yellow
+        @tablet
+            flex-direction: row
 
-        
+        &-item
+            width: 100%
+            height: 20rem
+
+            @include tablet
+                width: 50%
+
+            @include desktop
+                width: 27%
+                height: 25rem
+
             &--center
-                width: 40%
+                @include tablet
+                    order: 1
+                    width: 100%
+
+                @include desktop
+                    order: 0
+                    width: 46%
 
             &--img-1
                 background: url("../assets/space-1.png")
-                background-size: 100% 100%
+                background-size: cover
+                background-position:  50% 100%
 
             &--img-2
                 background: url("../assets/space-2.png")
-                background-size: 100% 100%
+                background-size: cover
+                background-position:  50% 100%
 
             &--img-3
                 background: url("../assets/space-3.png")
-                background-size: 100% 100%
+                background-size: cover
                 background-position:  50% 100%
        
             
     &__interactive-heading
-        height: 22.5rem
         display: flex
         justify-content: center
         align-items: center
-        padding: 2rem
+        padding: 4rem
 
 
-    
     &__interactive-heading > .h2
         display: flex
         align-items: flex-start
         flex-direction: column
-        height: 15rem
+        font-size: 2rem
+
+        @include tablet
+            font-size: 3.75rem
     
     &__center-text
         color: rgb(200, 182,163)
         position: relative
         width: 400px
-        height: 10rem
+        height: 2.5rem
+
+        @include tablet 
+            height: 4.25rem
 
 
     
@@ -71,11 +110,18 @@
     background-size: cover
     background-repeat: no-repeat
     width: 100%
+    overflow: hidden
 
     &__heading
         width: 40rem
         margin: 0 1rem
         white-space: nowrap
+
+        &.h2
+            font-size: 1.6rem
+
+            @include tablet
+                font-size:  3.75rem
         
         &-container
             display: flex
@@ -90,12 +136,15 @@
 
     &__list
         display: flex
-        padding: 1rem 10rem 3rem 10rem
+        padding: 1rem 9rem 3rem 9rem
         list-style: none
-        justify-content: space-between
+        flex-wrap: wrap
+        align-items: center
+        justify-content: center
+
 
     &__list-item
-        height: 15rem
+        height:  15rem
         width: 15rem
         border-radius: 100%
         border: 1px solid rgba(255,255,255, .5)
@@ -103,6 +152,7 @@
         align-items: center
         justify-content: center
         padding: 1rem
+        margin: 1rem
 
         &:hover
             background-color: rgb(200, 182, 163)
@@ -120,6 +170,7 @@
         text-decoration: none
         font-size: 1.75rem
         line-height: 2.1rem
+        height: 20%
 
 .socials
     background-color: rgb(200, 182,163)
@@ -136,13 +187,35 @@
 
     &__container
         display: flex
+        flex-direction: column
         width: 100%
-        height: 30rem
+        // height: 25rem
+
+        @include desktop
+            flex-direction: row
+            width: 100%
+            height: 30rem
+            
+        
         
     &__group
-        width: 50%
-        height: 100%
+        width: 100%
+        height: 30rem
         display: flex
+        height: 20rem
+
+        @include tablet
+            height: 25rem
+
+
+        @include desktop
+            width: 50%
+            height: 100%
+            display: flex
+
+
+        
+
         
 
     &__group-big
@@ -154,11 +227,18 @@
         background-repeat: no-repeat
 
 
+
     &__group-col
         width: 35%
         height: 100%
         display: flex
         flex-direction: column
+
+        &--offset
+            order: -1
+            
+            @include desktop
+                order: 0
 
     &__group-small
         background-image: url("../assets/post-1.png")
