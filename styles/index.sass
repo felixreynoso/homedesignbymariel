@@ -41,9 +41,7 @@
                 background: url("../assets/space-3.png")
                 background-size: 100% 100%
                 background-position:  50% 100%
-
-
-        
+       
             
     &__interactive-heading
         height: 22.5rem
@@ -51,19 +49,20 @@
         justify-content: center
         align-items: center
         padding: 2rem
+
+
     
     &__interactive-heading > .h2
-
         display: flex
-        align-items: center
-
-    &__words-list
-        font-style: italic
-        list-style: none
-        display: flex
+        align-items: flex-start
         flex-direction: column
-        align-items: center
+        height: 15rem
+    
+    &__center-text
         color: rgb(200, 182,163)
+        position: relative
+        width: 400px
+        height: 10rem
 
 
     
@@ -205,7 +204,9 @@
         justify-content: center
             
 
- #socials-anchor,
- #spaces-anchor,
- #services-anchor
+#socials-anchor,
+#spaces-anchor,
+#services-anchor
     scroll-behavior: smooth
+
+

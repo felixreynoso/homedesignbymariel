@@ -52,15 +52,15 @@
 }
 .spaces__interactive-heading > .h2 {
   display: flex;
-  align-items: center;
-}
-.spaces__words-list {
-  font-style: italic;
-  list-style: none;
-  display: flex;
+  align-items: flex-start;
   flex-direction: column;
-  align-items: center;
+  height: 15rem;
+}
+.spaces__center-text {
   color: rgb(200, 182, 163);
+  position: relative;
+  width: 400px;
+  height: 10rem;
 }
 
 .services {
@@ -192,4 +192,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#socials-anchor,
+#spaces-anchor,
+#services-anchor {
+  scroll-behavior: smooth;
 }/*# sourceMappingURL=index.css.map */
